@@ -1,0 +1,28 @@
+此代码针对的数据，每个标注数据必须有.meta文件，如果没有得先生成.meta文件
+
+文件夹中有一个data的文件夹，里面是一些测试数据，大家使用此程序时，可先拿这些数据进行代码测试。
+
+运行 main.py 文件：
+python *.py --destination=C:/Users/xujun/Desktop/data_gene_optimition/data --width=1024 --height=384 --img_type=.png --tfrecords=train.tfrecords
+
+
+--destination：指定原数据的所在路径 eg:C:/Users/xujun/Desktop/data_gene_optimition/data
+
+--width:图片要resize的宽度
+
+--height：图片要resize的高度
+
+--img_type：原数据中的图片格式是 .jpg还是.png
+
+--tfrecords:给tfrecords格式的文件的名字
+
+程序运行完毕后，会在输入路径“C:/Users/xujun/Desktop/data_gene_optimition/data”的同级目录下，生成：
+	C:/Users/xujun/Desktop/data_gene_optimition/count_class.txt 
+        C:/Users/xujun/Desktop/data_gene_optimition/labels --存放labels图片
+        C:/Users/xujun/Desktop/data_gene_optimition/labels_resize --存放labels缩放后的图片
+	C:/Users/xujun/Desktop/data_gene_optimition/ori_resize --存放原图片resize后的图片
+	C:/Users/xujun/Desktop/data_gene_optimition/tfrecords --存放tfrecords格式的文件
+
+
+
+
